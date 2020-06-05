@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-//import './Zip.css';
+import './Zip.css';
+
 import axios from "axios";
 class Zipsearch extends Component {
   constructor(props) {
@@ -43,10 +44,11 @@ class Zipsearch extends Component {
       ));
     }
     return (
-      <div>
+   <>
         <h1>Zip Code Search</h1>
-        <div className="search">
+        <div class = "search">
           <label htmlFor="zipCode">Enter a zip code: </label>
+          
           <input
             type="text"
             pattern="[0-9]*"
@@ -57,10 +59,10 @@ class Zipsearch extends Component {
             </input>
           <br />
           <br />
-        </div>
         <div class="zipdata">{display}</div>
-      </div>
-    );
+        </div>
+   </>
+    ); 
   }
 }
 export default Zipsearch;
